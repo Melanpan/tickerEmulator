@@ -107,12 +107,12 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--bind", "-b", help="IP address to bind to.", default="0.0.0.0")
-    parser.add_argument("--port", "-p", help="Port to use", default=5004)
-    parser.add_argument("--buffer", help="Buffer size", default=65536)
-    parser.add_argument("--fps", help="FPS", default=60)
-    parser.add_argument("--fade", help="Time in seconds to wait before clearing the pixels", default=8)
-    parser.add_argument("--height", help="The height of the display", default=128)
-    parser.add_argument("--width", help="The width of the display", default=32)
+    parser.add_argument("--port", "-p", help="Port to use", default=5004, type=int)
+    parser.add_argument("--buffer", help="Buffer size", default=65536, type=int)
+    parser.add_argument("--fps", help="FPS", default=60, type=int)
+    parser.add_argument("--fade", help="Time in seconds to wait before clearing the pixels", default=8, type=int)
+    parser.add_argument("--height", help="The height of the display", default=128, type=int)
+    parser.add_argument("--width", help="The width of the display", default=32, type=int)
 
 
     emu = tickerEmulator(args=parser.parse_args())
